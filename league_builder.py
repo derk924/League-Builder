@@ -13,6 +13,20 @@ def read_csv_file():
 
 			players.append(player)
 
+	experpienced_players(players)
+
+def experpienced_players(players):
+
+	number_of_experienced_players = 0
+
+	for player in players:
+		if player['experience'] == 'YES':
+			number_of_experienced_players += 1
+
+	print(number_of_experienced_players)
+
+
+
 
 read_csv_file() 
 
