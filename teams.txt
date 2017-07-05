@@ -1,0 +1,31 @@
+Sharks Team:
+============
+
+Joe Smith, YES, Jim and Jan Smith
+Jill Tanner, YES, Clara Tanner
+Bill Bon, YES, Sara and Jenny Bon
+Eva Gordon, NO, Wendy and Mike Gordon
+Matt Gill, NO, Charles and Sylvia Gill
+Kimmy Stein, NO, Bill and Hillary Stein
+
+
+Dragon Team:
+============
+
+Karl Saygan, YES, Heather Bledsoe
+Suzane Greenberg, YES, Henrietta Dumas
+Diego Soto, YES, Robin and Sarika Soto
+Eva Gordon, NO, Wendy and Mike Gordon
+Matt Gill, NO, Charles and Sylvia Gill
+Kimmy Stein, NO, Bill and Hillary Stein
+
+
+Raptors Team:
+============
+
+Phillip Helm, YES, Thomas Helm and Eva Jones
+Les Clay, YES, Wynonna Brown
+Herschel Krustofski, YES, Hyman and Rachel Krustofski
+Eva Gordon, NO, Wendy and Mike Gordon
+Matt Gill, NO, Charles and Sylvia Gill
+Kimmy Stein, NO, Bill and Hillary Stein

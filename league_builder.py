@@ -15,6 +15,7 @@ def read_csv_file():
 
 	count_experpienced_players(players)
 
+
 def count_experpienced_players(players):
 
 	#number_of_experienced_players = 0
@@ -31,6 +32,7 @@ def count_experpienced_players(players):
 	#print(number_of_experienced_players)
 	divide_players(experienced_players, non_experienced_players, players)
 
+
 def divide_players(experienced_players, non_experienced_players, players):
 
 	NUMBER_OF_TEAMS = 3
@@ -38,7 +40,7 @@ def divide_players(experienced_players, non_experienced_players, players):
 	experienced_players_per_team = int(len(experienced_players) / NUMBER_OF_TEAMS)
 
 
-	sharks = experienced_players[0:experienced_players_per_team]
+	sharks = experienced_players[:experienced_players_per_team]
 	dragons = experienced_players[experienced_players_per_team: experienced_players_per_team*2]
 	raptors = experienced_players[experienced_players_per_team*2:]
 
@@ -49,6 +51,31 @@ def divide_players(experienced_players, non_experienced_players, players):
 			dragons.append(player)
 		if len(raptors) != number_of_players_per_team:
 			raptors.append(player)
+
+	save_to_file(sharks,dragons,raptors)
+
+def save_to_file(sharks, dragons, raptors):
+
+	with open('teams.txt', 'a') as file:
+		file.seek(0)
+		file.truncate()
+
+		file.write('Sharks Team:\n============\n\n')
+		for player in sharks:
+			row = player['name'] + ', ' + player['experience'] + ', ' + player['guardian'] + '\n'
+			file.write(row)
+
+
+		file.write('\n\nDragon Team:\n============\n\n')
+		for player in dragons:
+			row = player['name'] + ', ' + player['experience'] + ', ' + player['guardian'] + '\n'
+			file.write(row)
+
+
+		file.write('\n\nRaptors Team:\n============\n\n')
+		for player in raptors:
+			row = player['name'] + ', ' + player['experience'] + ', ' + player['guardian'] + '\n'
+			file.write(row)
 
 
 
