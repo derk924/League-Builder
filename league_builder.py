@@ -37,20 +37,18 @@ def divide_players(experienced_players, non_experienced_players, players):
 	number_of_players_per_team = int(len(players) / NUMBER_OF_TEAMS)
 	experienced_players_per_team = int(len(experienced_players) / NUMBER_OF_TEAMS)
 
-	#print(number_of_players_per_team)
-	#print(experienced_players_per_team)
 
 	sharks = experienced_players[0:experienced_players_per_team]
 	dragons = experienced_players[experienced_players_per_team: experienced_players_per_team*2]
 	raptors = experienced_players[experienced_players_per_team*2:]
 
-	print(sharks)
-	print('---------------------------------------')
-	print(dragons)
-	print('---------------------------------------')
-	print(raptors)
-
-
+	for player in non_experienced_players:
+		if len(sharks) != number_of_players_per_team:
+			sharks.append(player)
+		if len(dragons) != number_of_players_per_team:
+			dragons.append(player)
+		if len(raptors) != number_of_players_per_team:
+			raptors.append(player)
 
 
 
