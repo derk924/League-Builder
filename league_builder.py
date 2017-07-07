@@ -29,6 +29,10 @@ def count_experpienced_players(players):
 		else:
 			non_experienced_players.append(player)
 
+	#print(experienced_players)
+	#print('-----------------------------')
+	#print(non_experienced_players)
+
 	#print(number_of_experienced_players)
 	divide_players(experienced_players, non_experienced_players, players)
 
@@ -47,9 +51,9 @@ def divide_players(experienced_players, non_experienced_players, players):
 	for player in non_experienced_players:
 		if len(sharks) != number_of_players_per_team:
 			sharks.append(player)
-		if len(dragons) != number_of_players_per_team:
+		elif len(dragons) != number_of_players_per_team:
 			dragons.append(player)
-		if len(raptors) != number_of_players_per_team:
+		else:
 			raptors.append(player)
 
 	save_to_file(sharks,dragons,raptors)
@@ -84,12 +88,12 @@ def save_to_file(sharks, dragons, raptors):
 def create_welcome_letters(all_players):
 
 	for player in all_players:
-		#print(player['name'].lower())
 		name = player['name'].lower()
-		#print(name.index(' '))
 		index = name.index(' ')
-		name = name[:index] + '_' + name[index+1:]
-		print(name)
+		file_name = name[:index] + '_' + name[index+1:] + '.txt'
+		#print(name)
+		with open(file_name, 'w') as file_object:
+			file_object.write('test')
 
 
 
