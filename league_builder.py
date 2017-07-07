@@ -77,6 +77,21 @@ def save_to_file(sharks, dragons, raptors):
 			row = player['name'] + ', ' + player['experience'] + ', ' + player['guardian'] + '\n'
 			file.write(row)
 
+	all_players = sharks + dragons + raptors
+	create_welcome_letters(all_players)
+
+
+def create_welcome_letters(all_players):
+
+	for player in all_players:
+		#print(player['name'].lower())
+		name = player['name'].lower()
+		#print(name.index(' '))
+		index = name.index(' ')
+		name = name[:index] + '_' + name[index+1:]
+		print(name)
+
+
 
 
 read_csv_file() 
