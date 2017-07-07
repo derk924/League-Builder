@@ -82,18 +82,37 @@ def save_to_file(sharks, dragons, raptors):
 			file.write(row)
 
 	all_players = sharks + dragons + raptors
-	create_welcome_letters(all_players)
+	create_welcome_letters(all_players, sharks, dragons, raptors)
 
 
-def create_welcome_letters(all_players):
+def create_welcome_letters(all_players, sharks, dragons, raptors):
 
 	for player in all_players:
 		name = player['name'].lower()
 		index = name.index(' ')
 		file_name = name[:index] + '_' + name[index+1:] + '.txt'
 		#print(name)
+
+		team_name = ''
+
+		if player in sharks:
+			team_name = 'Sharks'
+
+		if player in dragons:
+			team_name = 'Dragons'
+
+		if player in raptors:
+			team_name = 'Raptors'
+
+		header = 'Dear ' + player['guardian'] + ',\n'
+		body = 'We would like to inform you that ' + player['name'] + ' has joined the ' + team_name + ' and the first practice will be  on July 07, 2017\n'
+		end = '\nThank you,\nYoussef'
+
+		letter =  header + body + end
 		with open(file_name, 'w') as file_object:
-			file_object.write('test')
+			file_object.write(letter)
+	
+
 
 
 
